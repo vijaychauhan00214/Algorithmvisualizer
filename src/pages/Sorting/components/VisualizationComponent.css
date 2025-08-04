@@ -1,0 +1,38 @@
+.visualization {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.array-container {
+  display: flex;
+  align-items: flex-end;
+  overflow-x: auto;
+  padding: 1rem;
+}
+
+.array-bar {
+  width: 30px;
+  margin: 0 5px;
+  background-color: #1f77b4;
+  height: 100px;
+  transition: height 0.8s ease; /* Smooth height transition */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.array-bar.moving {
+  background-color: #0d1157; /* Color during sorting */
+}
+
+.array-bar.sorted {
+  background-color: #2ca02c; /* Color for sorted elements */
+}
+
+.array-bar span {
+  color: #FFE9D0;
+  font-size: 0.8rem;
+  padding: 0.2rem;
+  font-weight: bolder;
+}

@@ -1,0 +1,76 @@
+/* Home.css */
+.home-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f0f4f8;
+  text-align: left; /* Align text to the left */
+}
+
+h2 {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #007bff;
+  margin-top: 20px;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+ul {
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0; /* Remove default padding */
+}
+
+li {
+  margin: 10px 0; /* Add space between list items */
+  font-size: 0.95rem;
+}
+
+/* Button Styles */
+.get-started-button {
+  padding: 10px 20px;
+  font-size: 1rem; /* Slightly larger font size */
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 9px rgba(0, 123, 255, 0.922);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 20px; /* Add margin above the button */
+}
+
+.get-started-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 15px; /* Reduce padding on smaller screens */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Smaller font size for headings */
+  }
+
+  h3 {
+    font-size: 1.25rem; /* Smaller font size for subheadings */
+  }
+
+  p {
+    font-size: 0.9rem; /* Slightly smaller font size for paragraphs */
+  }
+
+  .get-started-button {
+    padding: 8px 16px; /* Smaller padding for buttons */
+    font-size: 0.9rem; /* Smaller font size for buttons */
+  }
+}

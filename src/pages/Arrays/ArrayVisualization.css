@@ -1,0 +1,216 @@
+/* Theory Card */
+.theory-card {
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 3px solid #d61919; /* Adjust border thickness and color */
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  max-width: 0px;
+  text-align: center;
+  font-weight: 5px; /* Use 'bold' instead of '2px' for font weight */
+}
+
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: #cccef1;
+  color: #011d2b;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Wrapper for the content */
+.wrapper {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Footer should be placed after the wrapper */
+footer {
+  background: #011d2b;
+  color: #FFF;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Array Visualization Section */
+.array-visualization {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Cyberpunk-Themed Input Field */
+.cyberpunk-input {
+  border: 2px solid #011d2b;
+  border-radius: 5px;
+  padding: 10px;
+  background: #b5c1f3;
+  color: #1c1212;
+  font-size: 16px;
+  width: 100%;
+  max-width: 300px;
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.cyberpunk-input.error {
+  border-color: #FF5C5C;
+}
+
+.cyberpunk-input:focus {
+  border-color: #B1AFFF;
+  box-shadow: 0 0 10px rgba(76, 75, 106, 0.5);
+  outline: none;
+}
+
+.error-message {
+  color: #FF5C5C;
+  margin-top: 5px;
+}
+
+/* Generate Button */
+.generate-button {
+  background: #BBE9FF;
+  color: #011d2b;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.generate-button:hover {
+  background: #A1D9FF;
+  transform: scale(1.05);
+}
+
+/* Card-Like Div */
+.card {
+  background: #e6e9f3;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Array Elements and Indices */
+.array-elements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.array-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.array-element {
+  background: #FFF;
+  color: #0D1282;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s, background-color 0.5s;
+}
+
+.array-element.highlight {
+  background: #FFBB33;
+  transform: scale(1.2);
+  color: #FFF;
+}
+
+.array-index {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #011d2b;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.access-animation {
+  animation: fadeIn 0.5s;
+}
+
+/* Element Access Input Field */
+.index-input {
+  border: 2px solid #011d2b;
+  border-radius: 5px;
+  padding: 10px;
+  background: #83a4ff;
+  color: #FFF;
+  font-size: 16px;
+  width: 100%;
+  max-width: 300px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.index-input::placeholder{
+  color: #ffff;
+}
+
+/* Access Button */
+.access-button {
+  background: #B1AFFF;
+  color: #FFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.access-button:hover {
+  background: #9F8FEF;
+  transform: scale(1.05);
+}
+
+/* Access Result */
+.access-result {
+  background: #e6e9f3;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.access-result p {
+  margin: 5px 0;
+}
+
+/* Align buttons and inputs */
+.access-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

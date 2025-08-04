@@ -1,0 +1,92 @@
+/* global.css */
+
+/* Ensure the body takes up the full height */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: hsl(0, 6%, 85%);
+  overflow-x: hidden;
+}
+
+/* Main wrapper for the content and footer */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Content area should take the remaining space before the footer */
+main {
+  flex: 1;
+  padding: 20px;
+  background-color: #cccef1;
+  overflow-y: auto; /* Ensure scrollability */
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #0D1282; /* Footer background color */
+  color: #ffffff; /* Footer text color */
+  width: 100%;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: auto; /* Pushes footer to the bottom */
+}
+
+footer p {
+  margin: 0;
+  color: #ffffff;
+}
+
+.social-media { 
+  margin-top: 0.5rem;
+}
+
+.social-media a {
+  color: #FFE9D0;
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.social-media a:hover {
+  color: #FFFED3;
+}
+
+/* Media queries for responsive design */
+@media only screen and (max-width: 768px) {
+  main {
+    padding: 15px;
+  }
+
+  footer {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .social-media a {
+    font-size: 1rem;
+    margin: 0 0.3rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  main {
+    padding: 10px;
+
+  }
+body{
+  font-size: 0.7rem;
+
+}
+  footer {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .social-media a {
+    font-size: 0.9rem;
+    margin: 0 0.2rem;
+  }
+}

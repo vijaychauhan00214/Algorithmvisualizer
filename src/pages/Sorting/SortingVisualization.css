@@ -1,0 +1,140 @@
+/* Sorting Visualization Container */
+.sorting-visualization {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure it covers full height */
+  min-width: 100vw;
+  flex-grow: 1;
+}
+
+/* Algorithm Buttons Container */
+.algorithm-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  justify-content: center; /* Center buttons horizontally */
+  position: sticky; /* Make the container sticky */
+  top: 0; /* Align it with the top of the viewport */
+  background-color: #ffffff; /* Background to cover content */
+  padding: 1rem;
+  z-index: 1000; /* Ensure it stays above other content */
+  border-bottom: 1px solid #ddd; /* Optional: Add a border for separation */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Algorithm Buttons Styling */
+.algorithm-buttons button {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #cecfd0;
+  border-radius: 4px;
+  color: #0d1157;
+}
+
+/* Active Button Styling */
+.algorithm-buttons button.active {
+  background-color: #0d1157; /* Active button color */
+  color: #fff;
+  border: 2px solid #0d1157;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.algorithm-buttons button:hover {
+  background: #A1D9FF;
+  color: #011d2b;
+  transform: scale(1.05);
+}
+
+.theory-card {
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+/* Visualization Sections */
+.visualization-sections {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  padding-bottom: 2rem; /* Prevent content from being blocked by footer */
+  scroll-padding-top: 60px;
+}
+
+/* Individual Section Styling */
+section {
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Active Section Styling */
+section.active {
+  border-color: #007bff;
+  background-color: #e0f7fa;
+}
+
+/* Section Heading Styling */
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) { 
+  .algorithm-buttons button {
+    font-size: 0.875rem;
+    padding: 0.375rem 0.75rem;
+  }
+
+  .sorting-visualization {
+    padding: 1rem; /* Add padding to prevent overflow */
+  }
+
+  .visualization-sections {
+    padding-bottom: 3rem; /* Increase padding to ensure content is not blocked */
+  }
+
+  section {
+    margin: 0.2rem 0; /* Reduce margin for better spacing */
+    padding: 0.5rem; /* Reduce padding for smaller screens */
+  }
+
+  h2 {
+    font-size: 1.25rem; /* Adjust heading size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .algorithm-buttons {
+    flex-direction: row; /* Stack buttons vertically */
+    padding: 0.5rem; /* Reduce padding */
+  }
+
+  .algorithm-buttons button {
+    font-size: 0.75rem; /* Further reduce button font size */
+    padding: 0.25rem 0.5rem; /* Adjust padding */
+  }
+
+  .theory-card {
+    padding: 0.75rem; /* Adjust padding for smaller screens */
+  }
+
+  section {
+    margin: 0.25rem 0; /* Further reduce margin */
+    padding: 0.5rem; /* Further reduce padding */
+  }
+
+  h2 {
+    font-size: 1rem; /* Further adjust heading size */
+  }
+}

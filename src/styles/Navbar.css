@@ -1,0 +1,109 @@
+/* src/styles/Navbar.css */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0d1157; /* Navbar background color */
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  position: sticky; /* Make navbar sticky */
+  top: 0; /* Stick to the top of the viewport */
+  z-index: 1000; /* Ensure the navbar stays above other content */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-logo {
+  color: #FFE9D0; /* Navbar logo color */
+  font-size: 1.5rem;
+  text-decoration: none; /* Remove default underline */
+}
+
+nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center; /* Vertically center items */
+}
+
+nav li {
+  margin: 0 1rem;
+  position: relative; /* Position relative for the pseudo-element */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth zoom-in and box shadow effect */
+}
+
+nav a {
+  color: #FFFED3; /* Default link color */
+  font-size: 1rem;
+  padding: 0.5rem;
+  text-decoration: none; /* Remove default underline */
+}
+
+nav a:hover {
+  color: #BBE9FF; /* Change color on hover */
+  text-decoration: none; /* Ensure no underline on hover */
+}
+
+nav li:hover {
+  transform: scale(1.1); /* Zoom-in effect */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); Box shadow effect */
+}
+
+nav li .active {
+  background-color: #0c6cf2; 
+  border-radius: 8px;/* Background color for active link */
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+nav .active a {
+  color: #5a727d; /* Color for active link */
+  font-weight: bold; /* Optional: make active link bold */
+  text-decoration: underline; /* Underline for active link */
+}
+
+/* Media queries for responsive design */
+@media only screen and (max-width: 668px) {
+  nav {
+    flex-direction: row; /* Stack items vertically */
+    padding: 0.5rem; /* Adjust padding */
+  }
+
+  .nav-logo {
+    font-size: 1.2rem; /* Reduce logo size */
+  }
+
+  nav ul {
+    flex-direction: row; /* Stack nav items vertically */
+    width: 100%;
+  }
+
+  nav li {
+    margin: 0.5rem 0; /* Adjust margin for vertical stack */
+  }
+
+  nav a {
+    font-size: 0.8rem; /* Reduce font size for mobile */
+    padding: 0.4rem; /* Adjust padding */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .nav-logo {
+    font-size: 1rem; /* Further reduce logo size */
+  }
+  nav ul {
+    width: 100%;
+  }
+  nav a {
+    font-size: 0.7rem; /* Further reduce font size */
+    padding: 0.3rem; /* Adjust padding */
+  }
+}

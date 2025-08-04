@@ -1,0 +1,280 @@
+/* StackVisualization.css */
+
+.stack-visualization {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #cccef1;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.stack-heading {
+    font-size: 2.5rem;
+    color: #072743;
+    margin-bottom: 20px;
+}
+
+.stack-theory {
+    background: #bbf7ff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.stack-theory h3 {
+    color: #11395e;
+    margin-bottom: 10px;
+}
+
+.stack-container {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 1000px;
+}
+
+.stack-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stack-input {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 2px solid #072743;
+    outline: none;
+    width: 250px;
+}
+
+.stack-btn {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.push-btn {
+    background-color: #072743;
+}
+
+.pop-btn {
+    background-color: #0291B5;
+}
+
+.reset-btn {
+    background-color: #066886;
+}
+
+.stack-btn:hover {
+    transform: scale(1.05);
+}
+
+.stack-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.stack-visual {
+    width: 10%;
+    border: 2px solid #11395e;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 8rem;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    min-height: 400px;
+    background: #f0f8ff;
+}
+
+.stack-element {
+    background-color: #0291B5;
+    color: white;
+    width: 60%;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    border: 2px solid #066886;
+}
+
+.stack-info {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.stack-info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    background: #eef7fa;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 2px solid #072743;
+}
+
+.info-box {
+    background: #0d1282;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    min-width: 60px;
+    text-align: center;
+}
+
+.stack-message {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.message-box {
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    background-color: #bbf7ff;
+    color: #072743;
+}
+
+.message-box.error {
+    background-color: #ff3b4f;
+    color: white;
+    animation: errorAnimation 0.4s alternate infinite;
+}
+
+@keyframes errorAnimation {
+    from { background-color: #ff3b4f; }
+    to { background-color: #ff808f; }
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .stack-visualization {
+        padding: 15px;
+    }
+
+    .stack-heading {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .stack-theory {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .stack-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .stack-controls {
+        flex-direction: column;
+        gap: 2px;
+        margin-bottom: 5px;
+    }
+
+    .stack-input {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .stack-btn {
+        width: 100%;
+        font-size: 1rem;
+        padding: 1  px;
+    }
+
+    .stack-display {
+        display: 60%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stack-visual {
+        width: 70%;
+        margin-left: 0;
+        min-height: 200px;
+    }
+
+    .stack-info {
+        margin-top: 20px;
+
+        width: 100%;
+    }
+
+    .stack-element {
+        width: 80%;
+        font-size: 1rem;
+    }
+
+    .stack-info-item {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .info-box {
+        margin-top: 5px;
+        font-size: 0.9rem;
+    }
+
+    .stack-message {
+        margin-left: 0;
+    }
+
+    .message-box {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stack-heading {
+        font-size: 1.8rem;
+    }
+
+    .stack-theory, .stack-container {
+        padding: 10px;
+    }
+
+    .stack-btn {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .stack-element {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .stack-info-item {
+        font-size: 0.9rem;
+    }
+
+    .message-box {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
