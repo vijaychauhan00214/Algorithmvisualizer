@@ -1,4 +1,5 @@
 {
+  "homepage": "https://vijaychauhan00214.github.io/Algorithmvisualizer",
   "name": "algorithm-visualizer",
   "version": "0.1.0",
   "private": true,
@@ -12,6 +13,7 @@
     "chart.js": "^4.5.0",
     "cytoscape": "^3.33.0",
     "framer-motion": "^11.3.21",
+    "gh-pages": "^6.3.0",
     "openai": "^4.54.0",
     "react": "^18.3.1",
     "react-chartjs-2": "^5.3.0",
@@ -29,7 +31,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
