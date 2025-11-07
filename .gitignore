@@ -18,3 +18,4 @@ yarn-error.log*
 
 # Keep .env for local development
 !.env
+.env
